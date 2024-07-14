@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial Room - Myntra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for layout */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('background-image.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        header {
+            background-color: #ff3e6c;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #myntra-logo {
+            max-width: 150px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .measurement-container {
+            padding: 2rem;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .measurement-container2 {
+            padding: 2rem;
+            width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .measurement-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .measurement-container label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .measurement-container input {
+            width: calc(100% - 1.5rem);
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .measurement-container input:focus {
+            border-color: #ff3e6c;
+            outline: none;
+        }
+
+        .button-container {
+            margin-top: 1rem;
+        }
+
+        .button-container button {
+            padding: 0.75rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff3e6c;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .button-container button:hover {
+            background-color: #e02b50;
+        }
+
+        #message {
+            display: none;
+            text-align: center;
+            margin-top: 1rem;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        #style-squash-logo {
+            max-width: 600px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        #go-to-trial-room {
+            padding: 0.75rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff3e6c;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        #go-to-trial-room:hover {
+            background-color: #e02b50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="myntra-logo.jpeg" alt="Myntra Logo" id="myntra-logo">
+    </header>
+    <main>
+        <div class="measurement-container">
+            <h2>Enter Your Measurements</h2>
+            <label for="bust">Bust (cm):</label>
+            <input type="number" id="bust" placeholder="Enter bust size">
+            
+            <label for="waist">Waist (cm):</label>
+            <input type="number" id="waist" placeholder="Enter waist size">
+            
+            <label for="hip">Hip (cm):</label>
+            <input type="number" id="hip" placeholder="Enter hip size">
+            
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter height">
+            
+            <div class="button-container">
+                <button id="see-how-it-fits" onclick="saveAndShowMessage()">See How It Fits!</button>
+            </div>
+        </div>
+
+        <div class="measurement-container2">
+        <img src="Picture13.png" alt="Style Squash Logo" id="style-squash-logo">
+            <div id="message"></div>
+            
+            <button id="go-to-trial-room" onclick="goToTrialRoom()">Go to Trial Room</button>
+        </div>
+    </main>
+
+    <script>
+        function saveAndShowMessage() {
+            const bust = parseInt(document.getElementById('bust').value);
+            const waist = parseInt(document.getElementById('waist').value);
+            const hip = parseInt(document.getElementById('hip').value);
+
+            if (bust && waist && hip) {
+                // Save data (in this example, just display a message)
+                const userName = prompt("Enter your name: ");
+                const message = document.getElementById('message');
+                message.innerText = `Hi ${userName}, your data has been saved!`;
+                message.style.display = 'block';
+
+                // Show "Go to Trial Room" button and Style Squash logo
+                const goToTrialRoomButton = document.getElementById('go-to-trial-room');
+                goToTrialRoomButton.style.display = 'block';
+                
+                const styleSquashLogo = document.getElementById('style-squash-logo');
+                styleSquashLogo.style.display = 'block';
+            } else {
+                alert('Please fill in all measurements.');
+            }
+        }
+
+        function goToTrialRoom() {
+            const bust = parseInt(document.getElementById('bust').value);
+            const waist = parseInt(document.getElementById('waist').value);
+            const hip = parseInt(document.getElementById('hip').value);
+
+            // Determine which trial room to navigate based on measurements
+            let trialRoomSize = '';
+
+            // Example criteria, adjust as needed
+            if (bust >= 34 && bust <= 36 && waist >= 28 && waist <= 30 && hip >= 37 && hip <= 39) {
+                trialRoomSize = '../myntra/stylestash-trial-XS/index.html';
+            } else {
+                // Default to a general trial room if no specific size matches
+                trialRoomSize = '../myntra/stylestash-trial-XXL/index.html';
+         
+            }
+
+            // Navigate to the determined trial room
+            window.location.href = trialRoomSize;
+        }
+    </script>
+</body>
+</html>
+

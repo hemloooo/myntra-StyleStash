@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Step into Your Style</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+   <!-- owl stylesheets --> 
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+   <style>
+      body {
+         font-family: 'Poppins', sans-serif;
+         background-color: #f7f7f7;
+         color: #333;
+      }
+      .header {
+         text-align: center;
+         padding: 20px;
+         background: #ff3e6c;
+         color: #fff;
+      }
+      .header img {
+         width: 200px;
+         height: auto;
+         margin-bottom: 20px;
+      }
+      .header h1 {
+         font-size: 2.5rem;
+         font-weight: 700;
+         margin: 0;
+      }
+      .products_section {
+         padding: 40px 0;
+         background-color: #fff;
+      }
+      .products_section_2 {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         gap: 20px;
+      }
+      .products_box {
+         border: 2px solid #ff3e6c;
+         padding: 20px;
+         text-align: center;
+         margin-bottom: 30px;
+         background-color: #fff;
+         flex: 1;
+         min-width: 250px; /* Ensures that boxes don't get too narrow */
+         box-sizing: border-box;
+      }
+      .products_box h3 {
+         color: #000;
+         font-size: 1.5rem;
+         margin-bottom: 15px;
+      }
+      .products_box img {
+         max-width: 100%;
+         height: auto;
+         border: 2px solid #ddd;
+         margin-bottom: 15px;
+      }
+      .rate_text {
+         color: #000;
+         font-size: 1.2rem;
+         margin-bottom: 15px;
+      }
+      .button_box {
+         margin-top: 20px;
+      }
+      .button_box a {
+         display: inline-block;
+         background-color: #ff3e6c;
+         color: #fff;
+         padding: 10px 20px;
+         text-decoration: none;
+         font-weight: bold;
+         border-radius: 5px;
+         transition: background-color 0.3s;
+      }
+      .button_box a:hover {
+         background-color: #e0335e;
+      }
+      .modal-content {
+         text-align: center;
+         padding: 20px;
+      }
+      .modal-header {
+         border-bottom: none;
+      }
+      .modal-footer {
+         border-top: none;
+      }
+      .modal-body img {
+         width: 150px;
+         height: auto;
+         margin-bottom: 20px;
+      }
+      .modal-body h5 {
+         color: #ff3e6c;
+         margin-bottom: 20px;
+         font-size: 1.5rem;
+      }
+      .homepage_button {
+         background-color: #ff3e6c;
+         color: #fff;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         font-weight: bold;
+      }
+      .logo {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-bottom: 20px;
+      }
+   </style>
+</head>
+<body>
+   <!-- header -->
+   <div class="logo"><img src="images/w-logo.png" alt="Style Stash Logo" width="200px" height="100px"></div>
+   
+   <div class="header">
+      <h1>"Step into Your Style with Confidence!"</h1>
+   </div>
+
+   <!-- products section start -->
+   <div class="products_section">
+      <div class="container">
+         <div class="products_section_2">
+            <div class="products_box">
+               <h3>Wedding</h3>
+               <img src="images/wedding.jpg" alt="Wedding Outfits">
+               <h3 class="rate_text">10 Outfits</h3>
+               <div class="button_box"><a href="wedding.html">View in Wardrobe</a></div>
+            </div>
+            <div class="products_box">
+               <h3>Casual Wear</h3>
+               <img src="images/casual.jpg" alt="Casual Wear Outfits">
+               <h3 class="rate_text">15 Outfits</h3>
+               <div class="button_box"><a href="#">View in Wardrobe</a></div>
+            </div>
+            <div class="products_box">
+               <h3>Formal Wear</h3>
+               <img src="images/formal.png" alt="Formal Wear Outfits">
+               <h3 class="rate_text">8 Outfits</h3>
+               <div class="button_box"><a href="formal.html">View in Wardrobe</a></div>
+            </div>
+            <div class="products_box">
+               <h3>Party Wear</h3>
+               <img src="images/party.jpg" alt="Party Wear Outfits">
+               <h3 class="rate_text">12 Outfits</h3>
+               <div class="button_box"><a href="#">View in Wardrobe</a></div>
+            </div>
+            <div class="products_box">
+               <h3>Sports Wear</h3>
+               <img src="images/sports.jpg" alt="Sports Wear Outfits">
+               <h3 class="rate_text">5 Outfits</h3>
+               <div class="button_box"><a href="#">View in Wardrobe</a></div>
+            </div>
+            <div class="products_box">
+               <h3>Beach Wear</h3>
+               <img src="images/beach.jpg" alt="Beach Wear Outfits">
+               <h3 class="rate_text">7 Outfits</h3>
+               <div class="button_box"><a href="#">View in Wardrobe</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Modal -->
+   <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <img src="images/w-logo.png" alt="Logo">
+               <h5>Successfully added to your StyleStash wardrobe!</h5>
+               <button onclick="window.location.href='#'" class="homepage_button">Go Back to Homepage</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <!-- javascript --> 
+   <script src="js/owl.carousel.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.trial-room-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+}
+
+.trial-room-button img {
+    margin-top: 70px;
+    margin-right: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+.wardrobe-button {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    background: none;
+    border: none;
+    margin-bottom: 100pxs;
+}
+
+.wardrobe-button img {
+    width: 100px;
+    height: 100px;
+}
